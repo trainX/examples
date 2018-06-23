@@ -24,7 +24,7 @@ schema = StructType([
         StructField("fraud", IntegerType(), True)
 ])
 
-df = sqlContext.read.load ("file:/data/processed/cdr_trainx_min2.csv",
+df = sqlContext.read.load ("file:./cdr_trainx_min2.csv",
                                 format='com.databricks.spark.csv',
                                 header='true',
                                 schema=schema)
